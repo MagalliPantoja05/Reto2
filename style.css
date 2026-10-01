@@ -1,0 +1,112 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    background-color: #e9e2da;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #0A3871;
+    line-height: 1.6;
+}
+
+/* Imagen de portada */
+.portada {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+main {
+    margin: 0 auto 20px auto;
+    max-width: 1000px;
+    padding: 0 15px;
+}
+
+/* Título */
+.titulo {
+    text-align: center;
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Selector por ID para la presentación */
+#presentacion-principal {
+    position: relative;
+    background-image: url("imagenes/models.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Capa semitransparente sobre la imagen */
+.presentacion::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(233, 226, 218, 0.7);
+}
+
+/* Texto e información dentro de la presentación */
+.presentacion p, 
+.presentacion .lista {
+    position: relative;
+    z-index: 1;
+}
+
+.presentacion p {
+    font-weight: 600;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Lista */
+.lista {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.lista h3 {
+    margin-bottom: 10px;
+}
+
+.lista ul {
+    list-style-type: square;
+    display: inline-block;
+    text-align: left;
+}
+
+/* Selector por ID para la tabla */
+#seccion-requisitos {
+    margin: 40px 0;
+    text-align: center;
+}
+
+/* Tabla de requisitos */
+.tabla table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.tabla th, 
+.tabla td {
+    padding: 10px;
+    text-align: center;
+}
+
+.tabla th {
+    background-color: #0A3871;
+    color: #ffffff;
+}
