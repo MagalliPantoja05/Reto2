@@ -4,81 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Mi trabajo de sueños</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Registro de la persona Usuaria</title>
 </head>
-
 <body>
+
     <header>
-        <img class="portada" src="imagenes/dream-job.jpg" alt="portada">
+        <img class="portada" src="imagenes/formulario.jpg" alt="Portada de Registro">
     </header>
 
     <main>
-        <div class="titulo">
-            <span><h1>Mi trabajo de sueños</h1></span>
-        </div>
+        <div class="contenedor-formulario">
+            <!-- Título principal exigido en las instrucciones -->
+            <h1 class="titulo-principal">Registro de la persona Usuaria</h1>
 
-        <div id="presentacion-principal" class="presentacion">
-            <p>El trabajo de mis sueños consiste en realizar actividades con libertad creativa, siendo estos modelos 3D para ser vendidos en una plataforma virtual de videojuegos que me permitan contar con tiempo libre para disfrutar o relajarme después de una jornada. Además, deseo contar con un salario digno, estable y suficiente para no tener preocupaciones económicas.</p>
+            <form id="formulario-registro" action="#" method="POST">
+                
+                <!-- Campos de Texto -->
+                <div class="grupo-campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="input-campo" placeholder="Tu nombre" required>
+                </div>
 
-            <div class="lista">
-                <h3>Lista de razones por las que me gustaría tener ese trabajo</h3>
-                <ul>
-                    <li>Me da paz mental.</li>
-                    <li>Me gusta lo que hago.</li>
-                    <li>Me hace feliz ver a la gente satisfecha o feliz con mi trabajo.</li>
-                </ul>
-            </div>
-        </div>
+                <div class="grupo-campo">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" class="input-campo" placeholder="Tu apellido" required>
+                </div>
 
-        <div id="seccion-requisitos" class="tabla">
-            <span><h2>Requisitos para obtener ese trabajo</h2></span>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Requisitos</th>
-                        <th>SÍ</th>
-                        <th>NO</th>
-                        <th>Observaciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Contar con la mayoría de edad.</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Cumplir con los Términos de Uso y Estándares de la Comunidad.</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Contar con cierta cantidad de ganancias.</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Tener una cuenta y correo válido en el portal.</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Completar el formulario W-8 de contribuyentes no estadounidenses.</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
+                <div class="grupo-campo">
+                    <label for="correoelectronico">Correo Electrónico</label>
+                    <input type="email" id="correoelectronico" name="correoelectronico" class="input-campo" placeholder="email@dominio.com" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" name="contrasena" class="input-campo" placeholder="********" required>
+                </div>
+
+                <!-- Área de texto -->
+                <div class="grupo-campo">
+                    <label for="descripcion">Breve descripción sobre ti</label>
+                    <textarea id="descripcion" name="descripcion" class="input-campo textarea-campo" rows="4" placeholder="Escribe una breve descripción sobre ti..."></textarea>
+                </div>
+
+                <!-- Conjunto de opciones (Checkboxes) -->
+                <fieldset id="seccion-intereses" class="grupo-intereses">
+                    <legend>Intereses</legend>
+                    <div class="grid-checkboxes">
+                        <div class="item-checkbox">
+                            <input type="checkbox" id="interes-tecnologia" name="intereses" value="Tecnología">
+                            <label for="interes-tecnologia">Tecnología</label>
+                        </div>
+                        <div class="item-checkbox">
+                            <input type="checkbox" id="interes-arte" name="intereses" value="Arte">
+                            <label for="interes-arte">Arte</label>
+                        </div>
+                        <div class="item-checkbox">
+                            <input type="checkbox" id="interes-deporte" name="intereses" value="Deporte">
+                            <label for="interes-deporte">Deporte</label>
+                        </div>
+                        <div class="item-checkbox">
+                            <input type="checkbox" id="interes-lectura" name="intereses" value="Lectura">
+                            <label for="interes-lectura">Lectura</label>
+                            </div>
+                        <div class="item-checkbox">
+                            <input type="checkbox" id="interes-cocina" name="intereses" value="Cocina">
+                            <label for="interes-cocina">Cocina</label>
+                        </div>
+                        <div class="item-checkbox">
+                            <input type="checkbox" id="interes-fotografia" name="intereses" value="Fotografía">
+                            <label for="interes-fotografia">Fotografía</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Botón de envío -->
+                <div class="grupo-campo">
+                    <input type="submit" value="Registrarse" class="btn-submit">
+                </div>
+
+            </form>
         </div>
     </main>
+
 </body>
 </html>
